@@ -32,7 +32,8 @@ struct SceneKitOnSwiftUI2View: View {
 
             }
         }
-    }}
+    }
+}
 
 struct WrappedSceneKit2View: UIViewRepresentable {
 
@@ -92,15 +93,6 @@ struct WrappedSceneKit2View: UIViewRepresentable {
             // スクリーンショット保存
             DispatchQueue.main.async {
                 self.uiImg = uiView.snapshot()
-                let screenshot = uiView.snapshot()
-                if let data = screenshot.pngData() {
-                   let objFilePathUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(FINE_NAME)
-                    do {
-                        try data.write(to: objFilePathUrl)
-                    } catch {
-                        print("データ書き込み失敗")
-                    }
-                }
                 self.isScreenShot = false
             }
         }
