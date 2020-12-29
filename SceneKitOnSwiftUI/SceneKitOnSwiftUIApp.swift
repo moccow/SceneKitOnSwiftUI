@@ -11,7 +11,10 @@ import SwiftUI
 struct SceneKitOnSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SceneKitOnSwiftUI1View()
+//            SceneKitOnSwiftUI2View()
+//            SceneKitOnSwiftUI3View()
+//            SceneKitOnSwiftUI4View()
         }
     }
 }
